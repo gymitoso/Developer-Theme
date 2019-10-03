@@ -7,6 +7,16 @@ jQuery(document).ready(function($) {
     /* Bootstrap Tooltip for Skillset */
     $('.level-label').tooltip();
 
+    $('.level-bar-inner').each(function() {
+
+        var itemWidth = $(this).data('level');
+
+        $(this).animate({
+            width: itemWidth
+        }, 800);
+
+    });
+
 });
 
 $(window).on('load', function() {
